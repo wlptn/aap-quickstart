@@ -185,5 +185,5 @@ eda_pg_password=<set your own>
 
     ```shell
     export ANSIBLE_COLLECTIONS_PATH="${PWD}"/collections
-    ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install -K -vvv
+    ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
