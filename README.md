@@ -24,7 +24,7 @@ Helpful Links
 
 ## Prerequisites
 
-[**Minimum System Requirements**](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/aap-containerized-installation#ansible_automation_platform_system_requirements)
+[**Minimum System Requirements**](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/preparing-containerized-installation#system-requirements)
 - RAM: 16GB 
 - CPUs: 4
 - Local Disk: 60GB
