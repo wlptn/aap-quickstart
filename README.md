@@ -19,7 +19,7 @@ The containerized installer will deploy the following AAP components as containe
 Helpful Links
 - [Unofficial (but helpful) AAP Wiki](https://github.com/naps-sled-sas/aap_wiki)
 - [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#planning-installation)
-- [AAP Containerized Installer](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/containerized_installation/index)
+- [AAP Containerized Installer](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/index)
 - [Video: AAP Containerized Installer Walkthrough](https://www.youtube.com/watch?v=wUcCeyrCvyg&t=24s&ab_channel=RedHatAnsibleAutomation)
 
 ## Prerequisites
@@ -33,7 +33,7 @@ Helpful Links
 **OS Prerequisites**
 - A host VM running RHEL 9.2 or later
 - A non-root user for the Red Hat Enterprise Linux host, with sudo or other Ansible supported privilege escalation (sudo recommended). This user is responsible for the installation of containerized Ansible Automation Platform.
-- The appropriate network ports are open if a firewall is in place. For more information about the ports to open, see [Container topologies](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/tested_deployment_models/container-topologies) in *Tested deployment models*.
+- The appropriate network ports are open if a firewall is in place. For more information about the ports to open, see [Container topologies](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies) in *Tested deployment models*.
 
 ## Step 1: Preparing your RHEL Host
 
@@ -90,7 +90,7 @@ Helpful Links
   
     **NOTES** 
     - SSH keys are only required when installing on remote hosts. If doing a self contained local VM based installation, you can use ansible_connection=local.
-    - You do have the option to leverage ansible-vault to secure sensitive information in your inventory file ([docs with examples](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/planning_your_installation/about_the_installer_inventory_file#proc-securing_secrets_in_inventory_planning))
+    - You do have the option to leverage ansible-vault to secure sensitive information in your inventory file ([docs with examples](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/planning_your_installation/about_the_installer_inventory_file#proc-securing_secrets_in_inventory_planning))
 
     ```shell
     vim inventory-growth
