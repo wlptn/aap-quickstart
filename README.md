@@ -65,13 +65,14 @@ Helpful Links
 
 ## Step 2: Downloading the AAP Installer
 
-1. Download the latest **Ansible Automation Platform 2.6 Containerized Setup Bundle** .tar file from [Ansible Automation Platform download page](https://access.redhat.com/downloads/content/480/ver=2.6/rhel---9/2.5/x86_64/product-software)
+1. Download the latest **Ansible Automation Platform 2.6 Containerized Setup Bundle** .tar file from [Ansible Automation Platform download page](https://access.redhat.com/downloads/content/480/ver=2.6/rhel---9/2.6/x86_64/product-software)
+
    
-2.  Copy the installation program .tar file onto your RHEL host. In this case we are using scp to copy the installer from a workstation to our RHEL host.
+3.  Copy the installation program .tar file onto your RHEL host. In this case we are using scp to copy the installer from a workstation to our RHEL host.
     ```shell
     scp <username>:<source_host>:~/Downloads/<aap_setup_bundle_file> <username>:<remote_host>:/target/path
     ```
-3. Unpack the bundled installer
+4. Unpack the bundled installer
 
     ```shell
     tar xfvz ansible-automation-platform-containerized-setup-bundle-<version>-<arch_name>.tar.gz
