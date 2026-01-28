@@ -89,16 +89,16 @@ Helpful Links
     cd ansible-automation-platform-containerized-setup-bundle-<version>-<arch_name>
     ```
 
-2. Create a new inventory file and edit the necessary vars to customize your installation. To start, we can use example inventory file provided via the docs [here](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies#cont-a-env-a)
+2. Create a new inventory file and edit the necessary vars to customize your installation. To start, we can use example inventory file provided via the docs [here](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies#cont-a-env-a).
   
     **NOTES** 
     - SSH keys are only required when installing on remote hosts. If doing a self contained local VM based installation, you can use ansible_connection=local.
     - You do have the option to leverage ansible-vault to secure sensitive information in your inventory file ([docs with examples](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies#cont-a-env-a))
 
     ```shell
-    vim inventory-growth
+    vim inventory-custom
     ```
-
+For reference, this an example inventory provided for us via the docs [here](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies#cont-a-env-a).
 ```ini
 # This is the Ansible Automation Platform installer inventory file intended for the container growth deployment topology.
 # This inventory file expects to be run from the host where Ansible Automation Platform will be installed.
