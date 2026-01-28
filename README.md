@@ -70,7 +70,7 @@ Helpful Links
    
 3.  Copy the installation program .tar file onto your RHEL host. In this case we are using scp to copy the installer from a workstation to our RHEL host.
     ```shell
-    scp <username>:<source_host>:~/Downloads/<aap_setup_bundle_file> <username>:<remote_host>:/target/path
+    scp ~/Downloads/<aap_setup_bundle_file> <username>:<remote_host>:/target/path
     ```
 4. Unpack the bundled installer
 
