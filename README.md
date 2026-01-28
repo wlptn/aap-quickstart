@@ -89,7 +89,7 @@ Helpful Links
     cd ansible-automation-platform-containerized-setup-bundle-<version>-<arch_name>
     ```
 
-2. Edit the provided **inventory-growth** file or use the following example if installing locally on a single host. 
+2. Create a new inventory file and edit the necessary vars to customize your installation. To start, we can use example inventory file provided via the docs [here](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/tested_deployment_models/container-topologies#cont-a-env-a)
   
     **NOTES** 
     - SSH keys are only required when installing on remote hosts. If doing a self contained local VM based installation, you can use ansible_connection=local.
