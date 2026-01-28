@@ -98,8 +98,8 @@ Helpful Links
     ```shell
     vim inventory-growth
     ```
-    
-    ```ini
+
+```ini
 # Common variables
 # https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/rpm_installation/appendix-inventory-files-vars#ref-general-inventory-variables
 # -----------------------------------------------------
@@ -133,7 +133,7 @@ automationhub_pg_password=<set your own>
 automationedacontroller_admin_password=<set your own>
 automationedacontroller_pg_host=db.example.org
 automationedacontroller_pg_password=<set your own>
-    ```
+```
 
 3. Run the installer
 
