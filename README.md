@@ -187,3 +187,20 @@ eda_pg_password=<set your own>
     export ANSIBLE_COLLECTIONS_PATH="${PWD}"/collections
     ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
+
+Ansible vault tips
+Within the ansible installer directory (the dir you extracted), create two dirs: group_vars/all
+Now add a secrets.yml group_vars/all/ file. This is where we will define our sensitive vars referenced via our inventory-custom file
+
+ansible-vault create secrets.yml
+ansible-vault edit secrets.yml
+ansible-vault encrypt file.yml
+ansible-vault decrypt file.yml
+
+ansible-playbook -i <inventory_file_name> -e @<vault_file_name> --ask-vault-pass -K -v ansible.containerized_installer.install
+
+
+
+
+
+
