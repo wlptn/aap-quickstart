@@ -72,6 +72,8 @@ Helpful Links
     ```shell
     scp ~/Downloads/<aap_setup_bundle_file> <username>:<remote_host>:/target/path
     ```
+**NOTE** The installer will require at least 15GB of space within  directory where it exists. If there is insufficient space within your home directory for example, the installer will not pass its pre-requiste checks.
+
 4. Unpack the bundled installer
 
     ```shell
