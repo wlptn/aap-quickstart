@@ -1,4 +1,4 @@
-# Ansible Automation Platform 2.5 QuickStart - Single Node Containerized Installer
+# Ansible Automation Platform 2.6 QuickStart - Single Node Containerized Installer
 
 ## Overview 
 This is an unofficial guide to assist with installing the Ansible Automation Platform on a single node using the containerized installer. 
@@ -9,7 +9,7 @@ There are currently three methods to install the Ansible Automation platform com
 2. RPM Installer 
 3. Operator Installer (for OpenShift)
 
-The containerized installer will deploy the following AAP components as containers on one or more hosts. See the [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/planning_your_installation/index#planning-installation) docs for more details.
+The containerized installer will deploy the following AAP components as containers on one or more hosts. See the [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#planning-installation) docs for more details.
 - Platform Gateway
 - Private Automation Hub
 - Ansible Controller
@@ -18,13 +18,13 @@ The containerized installer will deploy the following AAP components as containe
 
 Helpful Links
 - [Unofficial (but helpful) AAP Wiki](https://github.com/naps-sled-sas/aap_wiki)
-- [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html-single/planning_your_installation/index#planning-installation)
+- [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#planning-installation)
 - [AAP Containerized Installer](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/containerized_installation/index)
 - [Video: AAP Containerized Installer Walkthrough](https://www.youtube.com/watch?v=wUcCeyrCvyg&t=24s&ab_channel=RedHatAnsibleAutomation)
 
 ## Prerequisites
 
-[**Minimum System Requirements**](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/containerized_installation/aap-containerized-installation#ansible_automation_platform_system_requirements)
+[**Minimum System Requirements**](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/aap-containerized-installation#ansible_automation_platform_system_requirements)
 - RAM: 16GB 
 - CPUs: 4
 - Local Disk: 60GB
@@ -65,7 +65,7 @@ Helpful Links
 
 ## Step 2: Downloading the AAP Installer
 
-1. Download the latest **Ansible Automation Platform 2.5 Containerized Setup Bundle** .tar file from [Ansible Automation Platform download page](https://access.redhat.com/downloads/content/480/ver=2.5/rhel---9/2.5/x86_64/product-software)
+1. Download the latest **Ansible Automation Platform 2.6 Containerized Setup Bundle** .tar file from [Ansible Automation Platform download page](https://access.redhat.com/downloads/content/480/ver=2.6/rhel---9/2.5/x86_64/product-software)
    
 2.  Copy the installation program .tar file onto your RHEL host. In this case we are using scp to copy the installer from a workstation to our RHEL host.
     ```shell
