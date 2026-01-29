@@ -265,9 +265,9 @@ How do we get around this?
 
 Log into the container shell
 
-    ```bash
-    podman exec -it automation-controller-web /bin/bash
-    ```
+```bash
+podman exec -it automation-controller-web /bin/bash
+```
     
 Within the container create an empty folder inside your AAP projects directory. This will serve as the "portal" to your legacy files.
 
@@ -291,6 +291,7 @@ sudo mount --bind /opt/legacy-playbooks         /home/wlupton/aap/controller/dat
 ```
 
 **3. Verify persistence of the bind mount**
+
 A standard mount command will reset if you reboot the server. To make this permanent, add a line to your /etc/fstab file:
 
 ```
