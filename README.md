@@ -265,37 +265,37 @@ How do we get around this?
 
 Log into the container shell
 
-    ```
+    ```bash
     podman exec -it automation-controller-web /bin/bash
     ```
     
 Within the container create an empty folder inside your AAP projects directory. This will serve as the "portal" to your legacy files.
 
-    ```
-    mkdir -p /home/wlupton/aap/controller/data/projects/legacy_import
-    ```
+```bash
+mkdir -p /home/wlupton/aap/controller/data/projects/legacy_import
+```
 
 **2. Bind Mount the Directory**
 
 Exit the container terminal session
 
-   ```
-   exit
-   ```
+```bash
+exit
+```
 
 Create a bind mount on the linux host. This tells Linux to mirror the contents of your source directory into the new folder you just created.
 
-   ```
-   # Syntax: mount --bind <SOURCE> <DESTINATION>
-    sudo mount --bind /opt/legacy-playbooks         /home/wlupton/aap/controller/data/projects/legacy_import
-   ```
+```bash
+# Syntax: mount --bind <SOURCE> <DESTINATION>
+sudo mount --bind /opt/legacy-playbooks         /home/wlupton/aap/controller/data/projects/legacy_import
+```
 
 **3. Verify persistence of the bind mount**
 A standard mount command will reset if you reboot the server. To make this permanent, add a line to your /etc/fstab file:
 
-    ```
-    /opt/legacy-playbooks  /home/wlupton/aap/controller/data/projects/legacy_import  none  bind  0  0
-    ```
+```
+/opt/legacy-playbooks  /home/wlupton/aap/controller/data/projects/legacy_import  none  bind  0  0
+```
     
     
    
