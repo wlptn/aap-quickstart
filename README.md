@@ -229,10 +229,11 @@ unset ANSIBLE_COLLECTIONS_PATHS
 
 ## Day 1
 todo
+- have existing ansible-core assets?
 - custom certs
 - authentication
 - inventory setup
-- 
+
 
 
 
