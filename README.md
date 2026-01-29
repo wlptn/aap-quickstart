@@ -135,6 +135,7 @@ Helpful Links
     [all:vars]
     # Ansible
     ansible_connection=local
+    client_request_timeout=240  #NOTE: this is the only line that differs from the docs
 
     # Common variables
     # https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/containerized_installation/appendix-inventory-files-vars#ref-general-inventory-variables
