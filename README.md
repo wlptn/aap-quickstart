@@ -6,7 +6,7 @@ This is an unofficial guide to assist with installing the Ansible Automation Pla
 There are currently three methods to install the Ansible Automation platform components
 
 1. **Containerized Installer (recommended)**
-2. RPM Installer 
+2. RPM Installer  (Being deprecated in the future)
 3. Operator Installer (for OpenShift)
 
 The containerized installer will deploy the following AAP components as containers on one or more hosts. See the [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#planning-installation) docs for more details.
@@ -190,6 +190,7 @@ eda_pg_password=<set your own>
     export ANSIBLE_COLLECTIONS_PATH="${PWD}"/collections
     ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
+    - Use `ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install --help` to see all available flags
 4. Access the GUI using the hostname you configured
 ```
 https://aap.example.org
@@ -297,16 +298,3 @@ A standard mount command will reset if you reboot the server. To make this perma
 ```
 /opt/legacy-playbooks  /home/wlupton/aap/controller/data/projects/legacy_import  none  bind  0  0
 ```
-    
-    
-   
-    
-
-
-
-
-
-
-
-
-
