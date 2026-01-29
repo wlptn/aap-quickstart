@@ -243,7 +243,7 @@ todo
 
 ### I was using ansible cli, how do I import my playbooks directly into AAP?
 
-#### Direct Volume Mount (not recommended)
+#### Add your content to the AAP default project base path (not recommended)
 It is best practice to leverage a source control platform (github, gitlab, gitea, etc) however if you desire to leverage your existing automation assets via AAP using the containerized installation, here's how.
 
 Within AAP, we need to create a Project leveraging Source Control Type: Manual
