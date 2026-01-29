@@ -17,6 +17,7 @@ The containerized installer will deploy the following AAP components as containe
 - Database
 
 Helpful Links
+- [Video: Installing Ansible Automation Platform (AAP) 2.6 via Containerized Version - All-In-One](https://www.youtube.com/watch?v=9KeofmpeHmw)
 - [Unofficial (but helpful) AAP Wiki](https://github.com/naps-sled-sas/aap_wiki)
 - [Planning your AAP Installation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#planning-installation)
 - [AAP Containerized Installer Docs](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/index)
@@ -206,7 +207,7 @@ registry_username: user@example.com
 regsitry_password: password
 ```
 ```bash
-ansible-playbook -i <inventory_file_name> -e @<vault_file_name> --ask-vault-pass -K -v ansible.containerized_installer.install
+ansible-playbook -i <inventory_file_name> -e @group_vars/all/secrets.yml --ask-vault-pass -K -v ansible.containerized_installer.install
 ```
 ### Troubleshooting
 
