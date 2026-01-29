@@ -139,6 +139,8 @@ aap.example.org
 [all:vars]
 # Ansible
 ansible_connection=local
+client_request_timeout=240  NOTE: This is the only line that differs from the standard docs 
+
 
 # Common variables
 # https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/containerized_installation/appendix-inventory-files-vars#general-variables
