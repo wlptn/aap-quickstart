@@ -188,7 +188,7 @@ eda_pg_password=<set your own>
     ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
 
-###Ansible vault tips
+### Ansible vault tips
 
 Within the ansible installer directory (the dir you extracted), create two dirs: group_vars/all. This is where we will define our sensitive vars referenced via the installer
 
@@ -208,7 +208,7 @@ regsitry_password: password
 ```bash
 ansible-playbook -i <inventory_file_name> -e @<vault_file_name> --ask-vault-pass -K -v ansible.containerized_installer.install
 ```
-###Troubleshooting
+### Troubleshooting
 
 If you see this
 ```
