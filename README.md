@@ -248,6 +248,16 @@ It is best practice to leverage a source control platform (github, gitlab, gitea
 
 Within AAP, we need to create a Project leveraging Source Control Type: Manual
 
+By default, AAP stores project data within the following host path
+```bash
+/home/<your-aap-user>/aap/controller/data/projects
+```
+As an example, lets create a new folder called legacy-playbooks in this path
+```bash
+mkdir /home/<your-aap-user>/aap/controller/data/projects/legacy-playbooks
+```
+
+
 
     
     
