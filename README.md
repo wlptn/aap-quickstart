@@ -226,5 +226,14 @@ unset ANSIBLE_COLLECTIONS_PATHS
 
 
 
+## Day 1
+todo
+- custom certs
+- authentication
+- inventory setup
+- 
+
+
+
 
 
