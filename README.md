@@ -214,7 +214,7 @@ If you see this
 ```
 ERROR! the playbook: ansible.containerized_installer.install.yml could not be found
 ```
-Run the installer with high verbosity to inspect ansible_collection_location. Its likely that the default setting is not looking at the correct.
+Run the installer with high verbosity to inspect ansible_collection_location. Its likely that the default setting is not looking at the correct collection path provided via the installer dir.
 ```
 ansible collection location = /home/user/.ansible/collections:/usr/share/ansible/collections
 ```
