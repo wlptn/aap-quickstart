@@ -188,7 +188,7 @@ eda_pg_password=<set your own>
     ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
 
-Ansible vault tips
+###Ansible vault tips
 
 Within the ansible installer directory (the dir you extracted), create two dirs: group_vars/all. This is where we will define our sensitive vars referenced via the installer
 
@@ -205,14 +205,24 @@ Example secrets.yml file, following yaml variable conventions
 registry_username: user@example.com
 regsitry_password: password
 ```
-
- - ansible-vault create secrets.yml
- - ansible-vault edit secrets.yml
- - ansible-vault encrypt file.yml
- - ansible-vault decrypt file.yml
-
+```bash
 ansible-playbook -i <inventory_file_name> -e @<vault_file_name> --ask-vault-pass -K -v ansible.containerized_installer.install
+```
+###Troubleshooting
 
+If you see this
+```
+ERROR! the playbook: ansible.containerized_installer.install.yml could not be found
+```
+Run the installer with high verbosity to inspect ansible_collection_location. Its likely that the default setting is not looking at the correct.
+```
+ansible collection location = /home/user/.ansible/collections:/usr/share/ansible/collections
+```
+The fix: you need to clear this setting so Ansible falls back to using your ansible.cfg file provided via the ansible installer
+```bash
+unset ANSIBLE_COLLECTIONS_PATH
+unset ANSIBLE_COLLECTIONS_PATHS
+```
 
 
 
