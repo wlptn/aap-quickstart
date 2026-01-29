@@ -241,6 +241,57 @@ todo
 - authentication
 - inventory setup
 
+### I was using ansible cli, how do I import my playbooks directly into AAP?
+
+#### Direct Volume Mount (not recommended)
+It is best practice to leverage a source control platform (github, gitlab, gitea, etc) however if you desire to leverage your existing automation assets via AAP using the containerized installation, here's how.
+
+Within AAP, we need to create a Project leveraging Source Control Type: Manual
+
+By default this source control type will inspect a project base path that exists within a container. In this case, it is the automation-controller-web container. For example on your AAP linux host, we can inspect this directory via:
+
+```
+podman exec -it automation-controller-web /bin/bash
+```
+Now using the shell within the container we can verify the default path exists
+```
+ls /home/wlupton/aap/controller/data/projects
+```
+What's the catch? Containers are ephemeral. Put simply, we can theoretically add our ansible assets to this path within the container, but it will not persist in scenarios where the container may need to restart (e.g. an AAP upgrade scenario)
+
+How do we get around this?
+
+**1. Create a mount point within the container**
+   -  Log into the container shell
+    ```shell
+    podman exec -it automation-controller-web /bin/bash
+    ```
+   -  Within the container create an empty folder inside your AAP projects directory. This will serve as the "portal" to your legacy files.
+    ```shell
+    mkdir -p /home/wlupton/aap/controller/data/projects/legacy_import
+    ```
+**2. Bind Mount the Directory**
+   - Exit the container
+   ```shell
+   exit
+   ```
+   - Create a bind mount on the linux host. This tells Linux to mirror the contents of your source directory into the new folder you just created.
+   ```shell
+   # Syntax: mount --bind <SOURCE> <DESTINATION>
+    sudo mount --bind /opt/legacy-playbooks         /home/wlupton/aap/controller/data/projects/legacy_import
+   ```
+**3. Verify persistence of the bind mount**
+    - A standard mount command will reset if you reboot the server. To make this permanent, add a line to your /etc/fstab file:
+    ```shell
+    /opt/legacy-playbooks  /home/wlupton/aap/controller/data/projects/legacy_import  none  bind  0  0
+    ```
+    
+   
+    
+
+
+
+
 
 
 
