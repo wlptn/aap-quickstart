@@ -190,9 +190,21 @@ eda_pg_password=<set your own>
 
 Ansible vault tips
 
-Within the ansible installer directory (the dir you extracted), create two dirs: group_vars/all
-Now add a secrets.yml group_vars/all/ file. 
-This is where we will define our sensitive vars referenced via our inventory-custom file
+Within the ansible installer directory (the dir you extracted), create two dirs: group_vars/all. This is where we will define our sensitive vars referenced via the installer
+
+Now add a secrets.yml group_vars/all/ file via 
+
+```bash
+ansible-vault create group_vars/all/secrets.yml
+```
+```bash
+ansible-vault edit group_vars/all/secrets.yml
+```
+Example secrets.yml file, following yaml variable conventions
+```yaml
+registry_username: user@example.com
+regsitry_password: password
+```
 
  - ansible-vault create secrets.yml
  - ansible-vault edit secrets.yml
