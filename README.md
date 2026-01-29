@@ -190,6 +190,10 @@ eda_pg_password=<set your own>
     export ANSIBLE_COLLECTIONS_PATH="${PWD}"/collections
     ansible-playbook -i <inventory_file_name> ansible.containerized_installer.install
     ```
+4. Access the GUI using the hostname you configured
+```
+https://aap.example.org
+```
 
 ### Ansible vault tips
 
@@ -211,6 +215,7 @@ regsitry_password: password
 ```bash
 ansible-playbook -i <inventory_file_name> -e @group_vars/all/secrets.yml --ask-vault-pass -K -v ansible.containerized_installer.install
 ```
+
 ### Troubleshooting
 
 If you see this
