@@ -256,8 +256,9 @@ As an example, lets create a new folder called legacy-playbooks in this path
 ```bash
 mkdir /home/<your-aap-user>/aap/controller/data/projects/legacy-playbooks
 ```
-Within AAP, we can create a new Project with the "Manual" SCM Type
+Within AAP, we can create a new Project with the "Manual" SCM Type. Once this project is created, you can now access your playbooks from this directory when creating Job Templates.
 <img width="2346" height="974" alt="CleanShot 2026-02-03 at 13 33 01@2x" src="https://github.com/user-attachments/assets/fd3f88c3-5e47-4c31-901f-75fb339fe4a8" />
+
 
 
 
