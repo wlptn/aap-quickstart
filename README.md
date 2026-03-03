@@ -232,15 +232,6 @@ unset ANSIBLE_COLLECTIONS_PATH
 unset ANSIBLE_COLLECTIONS_PATHS
 ```
 
-
-
-## Day 1
-todo
-- have existing ansible-core assets?
-- custom certs
-- authentication
-- inventory setup
-
 ### I was using ansible cli, how do I import my playbooks directly into AAP?
 
 #### Add your content to the AAP default project base path (not recommended)
